@@ -40,113 +40,224 @@ races:
 restrict-races: false
 classes:
     NONE:
-        melee-attack-bonus: 0
-        melee-defence-bonus: 0
-        ranged-attack-bonus: 0
-        ranged-defence-bonus: 0
-        magic-attack-bonus: 0
-        magic-defence-bonus: 0
-        reflex-bonus: 0
-        luck-bonus: 0
+        base:
+            melee-attack-bonus: 0
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: 0
+            magic-attack-bonus: 0
+            magic-defence-bonus: 0
+            reflex-bonus: 0
+            luck-bonus: 0
+        level:
+            melee-attack-bonus: 0
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: 0
+            magic-attack-bonus: 0
+            magic-defence-bonus: 0
+            reflex-bonus: 0
+            luck-bonus: 0
     BARBARIAN:
-        melee-attack-bonus: 25
-        melee-defence-bonus: -10
-        ranged-attack-bonus: 5
-        ranged-defence-bonus: -5
-        magic-attack-bonus: 0
-        magic-defence-bonus: -10
-        reflex-bonus: -5
-        luck-bonus: 0
+        base:
+            melee-attack-bonus: 25
+            melee-defence-bonus: -10
+            ranged-attack-bonus: 5
+            ranged-defence-bonus: -5
+            magic-attack-bonus: 0
+            magic-defence-bonus: -10
+            reflex-bonus: -5
+            luck-bonus: 0
+        level:
+            melee-attack-bonus: 0
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: 0
+            magic-attack-bonus: 0
+            magic-defence-bonus: 0
+            reflex-bonus: 0
+            luck-bonus: 0
     BARD:
-        melee-attack-bonus: -10
-        melee-defence-bonus: -10
-        ranged-attack-bonus: 10
-        ranged-defence-bonus: -10
-        magic-attack-bonus: 10
-        magic-defence-bonus: 0
-        reflex-bonus: 10
-        luck-bonus: 0
+        base:
+            melee-attack-bonus: -10
+            melee-defence-bonus: -10
+            ranged-attack-bonus: 10
+            ranged-defence-bonus: -10
+            magic-attack-bonus: 10
+            magic-defence-bonus: 0
+            reflex-bonus: 10
+            luck-bonus: 0
+        level:
+            melee-attack-bonus: 0
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: 0
+            magic-attack-bonus: 0
+            magic-defence-bonus: 0
+            reflex-bonus: 0
+            luck-bonus: 0
     CLERIC:
-        melee-attack-bonus: 0
-        melee-defence-bonus: -25
-        ranged-attack-bonus: 0
-        ranged-defence-bonus: -25
-        magic-attack-bonus: 25
-        magic-defence-bonus: 25
-        reflex-bonus: 0
-        luck-bonus: 0
+        base:
+            melee-attack-bonus: 0
+            melee-defence-bonus: -25
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: -25
+            magic-attack-bonus: 25
+            magic-defence-bonus: 25
+            reflex-bonus: 0
+            luck-bonus: 0
     DRUID:
-        melee-attack-bonus: -10
-        melee-defence-bonus: 10
-        ranged-attack-bonus: -15
-        ranged-defence-bonus: 15
-        magic-attack-bonus: -15
-        magic-defence-bonus: 15
-        reflex-bonus: 0
-        luck-bonus: 0
+        base:
+            melee-attack-bonus: -10
+            melee-defence-bonus: 10
+            ranged-attack-bonus: -15
+            ranged-defence-bonus: 15
+            magic-attack-bonus: -15
+            magic-defence-bonus: 15
+            reflex-bonus: 0
+            luck-bonus: 0
+        level:
+            melee-attack-bonus: 0
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: 0
+            magic-attack-bonus: 0
+            magic-defence-bonus: 0
+            reflex-bonus: 0
+            luck-bonus: 0
     FIGHTER:
-        melee-attack-bonus: 20
-        melee-defence-bonus: 10
-        ranged-attack-bonus: 20
-        ranged-defence-bonus: -10
-        magic-attack-bonus: -20
-        magic-defence-bonus: 0
-        reflex-bonus: -10
-        luck-bonus: 0
+        base:
+            melee-attack-bonus: 20
+            melee-defence-bonus: 10
+            ranged-attack-bonus: 20
+            ranged-defence-bonus: -10
+            magic-attack-bonus: -20
+            magic-defence-bonus: 0
+            reflex-bonus: -10
+            luck-bonus: 0
+        level:
+            melee-attack-bonus: 0
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: 0
+            magic-attack-bonus: 0
+            magic-defence-bonus: 0
+            reflex-bonus: 0
+            luck-bonus: 0
     MONK:
-        melee-attack-bonus: 10
-        melee-defence-bonus: 0
-        ranged-attack-bonus: -20
-        ranged-defence-bonus: 0
-        magic-attack-bonus: -20
-        magic-defence-bonus: -20
-        reflex-bonus: 50
-        luck-bonus: 0
+        base:
+            melee-attack-bonus: 10
+            melee-defence-bonus: 0
+            ranged-attack-bonus: -20
+            ranged-defence-bonus: 0
+            magic-attack-bonus: -20
+            magic-defence-bonus: -20
+            reflex-bonus: 50
+            luck-bonus: 0
+        level:
+            melee-attack-bonus: 0
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: 0
+            magic-attack-bonus: 0
+            magic-defence-bonus: 0
+            reflex-bonus: 0
+            luck-bonus: 0
     PALADIN:
-        melee-attack-bonus: -50
-        melee-defence-bonus: 50
-        ranged-attack-bonus: -50
-        ranged-defence-bonus: 50
-        magic-attack-bonus: -50
-        magic-defence-bonus: 40
-        reflex-bonus: 0
-        luck-bonus: 10
+        base:
+            melee-attack-bonus: -50
+            melee-defence-bonus: 50
+            ranged-attack-bonus: -50
+            ranged-defence-bonus: 50
+            magic-attack-bonus: -50
+            magic-defence-bonus: 40
+            reflex-bonus: 0
+            luck-bonus: 10
+        level:
+            melee-attack-bonus: 0
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: 0
+            magic-attack-bonus: 0
+            magic-defence-bonus: 0
+            reflex-bonus: 0
+            luck-bonus: 0
     RANGER:
-        melee-attack-bonus: -20
-        melee-defence-bonus: 0
-        ranged-attack-bonus: 40
-        ranged-defence-bonus: 40
-        magic-attack-bonus: -20
-        magic-defence-bonus: -20
-        reflex-bonus: 20
-        luck-bonus: -40
+        base:
+            melee-attack-bonus: -20
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 40
+            ranged-defence-bonus: 40
+            magic-attack-bonus: -20
+            magic-defence-bonus: -20
+            reflex-bonus: 20
+            luck-bonus: -40
+        level:
+            melee-attack-bonus: 0
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: 0
+            magic-attack-bonus: 0
+            magic-defence-bonus: 0
+            reflex-bonus: 0
+            luck-bonus: 0
     ROGUE:
-        melee-attack-bonus: 30
-        melee-defence-bonus: -10
-        ranged-attack-bonus: 0
-        ranged-defence-bonus: -10
-        magic-attack-bonus: 0
-        magic-defence-bonus: -10
-        reflex-bonus: 50
-        luck-bonus: -50
+        base:
+            melee-attack-bonus: 30
+            melee-defence-bonus: -10
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: -10
+            magic-attack-bonus: 0
+            magic-defence-bonus: -10
+            reflex-bonus: 50
+            luck-bonus: -50
+        level:
+            melee-attack-bonus: 0
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: 0
+            magic-attack-bonus: 0
+            magic-defence-bonus: 0
+            reflex-bonus: 0
+            luck-bonus: 0
     SORCERER:
-        melee-attack-bonus: -25
-        melee-defence-bonus: -25
-        ranged-attack-bonus: -25
-        ranged-defence-bonus: -25
-        magic-attack-bonus: 50
-        magic-defence-bonus: 50
-        reflex-bonus: 0
-        luck-bonus: 0
+        base:
+            melee-attack-bonus: -25
+            melee-defence-bonus: -25
+            ranged-attack-bonus: -25
+            ranged-defence-bonus: -25
+            magic-attack-bonus: 50
+            magic-defence-bonus: 50
+            reflex-bonus: 0
+            luck-bonus: 0
+        level:
+            melee-attack-bonus: 0
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: 0
+            magic-attack-bonus: 0
+            magic-defence-bonus: 0
+            reflex-bonus: 0
+            luck-bonus: 0
     WIZARD:
-        melee-attack-bonus: -20
-        melee-defence-bonus: -20
-        ranged-attack-bonus: -20
-        ranged-defence-bonus: -20
-        magic-attack-bonus: 40
-        magic-defence-bonus: 40
-        reflex-bonus: 0
-        luck-bonus: 0
+        base:
+            melee-attack-bonus: -20
+            melee-defence-bonus: -20
+            ranged-attack-bonus: -20
+            ranged-defence-bonus: -20
+            magic-attack-bonus: 40
+            magic-defence-bonus: 40
+            reflex-bonus: 0
+            luck-bonus: 0
+        level:
+            melee-attack-bonus: 0
+            melee-defence-bonus: 0
+            ranged-attack-bonus: 0
+            ranged-defence-bonus: 0
+            magic-attack-bonus: 0
+            magic-defence-bonus: 0
+            reflex-bonus: 0
+            luck-bonus: 0
 restrict-classes: true
 weapons:
     WOOD_SWORD:

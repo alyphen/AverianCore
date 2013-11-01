@@ -107,14 +107,24 @@ public class AverianCore extends JavaPlugin {
 			luck += this.getConfig().getInt("races." + card.getRace() + ".luck-bonus");
 		}
 		if (this.getConfig().getConfigurationSection("classes").contains(card.getClazz())) {
-			meleeAttack += this.getConfig().getInt("classes." + card.getClazz() + ".melee-attack-bonus");
-			meleeDefence += this.getConfig().getInt("classes." + card.getClazz() + ".melee-defence-bonus");
-			rangedAttack += this.getConfig().getInt("classes." + card.getClazz() + ".ranged-attack-bonus");
-			rangedDefence += this.getConfig().getInt("classes." + card.getClazz() + ".ranged-defence-bonus");
-			magicAttack += this.getConfig().getInt("classes." + card.getClazz() + ".magic-attack-bonus");
-			magicDefence += this.getConfig().getInt("classes." + card.getClazz() + ".magic-defence-bonus");
-			reflex += this.getConfig().getInt("classes." + card.getClazz() + ".reflex-bonus");
-			luck += this.getConfig().getInt("classes." + card.getClazz() + ".luck-bonus");
+			meleeAttack += this.getConfig().getInt("classes." + card.getClazz() + ".base.melee-attack-bonus");
+			meleeDefence += this.getConfig().getInt("classes." + card.getClazz() + ".base.melee-defence-bonus");
+			rangedAttack += this.getConfig().getInt("classes." + card.getClazz() + ".base.ranged-attack-bonus");
+			rangedDefence += this.getConfig().getInt("classes." + card.getClazz() + ".base.ranged-defence-bonus");
+			magicAttack += this.getConfig().getInt("classes." + card.getClazz() + ".base.magic-attack-bonus");
+			magicDefence += this.getConfig().getInt("classes." + card.getClazz() + ".base.magic-defence-bonus");
+			reflex += this.getConfig().getInt("classes." + card.getClazz() + ".base.reflex-bonus");
+			luck += this.getConfig().getInt("classes." + card.getClazz() + ".base.luck-bonus");
+		}
+		if (this.getConfig().getConfigurationSection("classes").contains(card.getClazz())) {
+			meleeAttack += player.getLevel() * this.getConfig().getInt("classes." + card.getClazz() + ".level.melee-attack-bonus");
+			meleeDefence += player.getLevel() * this.getConfig().getInt("classes." + card.getClazz() + ".level.melee-defence-bonus");
+			rangedAttack += player.getLevel() * this.getConfig().getInt("classes." + card.getClazz() + ".level.ranged-attack-bonus");
+			rangedDefence += player.getLevel() * this.getConfig().getInt("classes." + card.getClazz() + ".level.ranged-defence-bonus");
+			magicAttack += player.getLevel() * this.getConfig().getInt("classes." + card.getClazz() + ".level.magic-attack-bonus");
+			magicDefence += player.getLevel() * this.getConfig().getInt("classes." + card.getClazz() + ".level.magic-defence-bonus");
+			reflex += player.getLevel() * this.getConfig().getInt("classes." + card.getClazz() + ".level.reflex-bonus");
+			luck += player.getLevel() * this.getConfig().getInt("classes." + card.getClazz() + ".level.luck-bonus");
 		}
 		if (player.getItemInHand() != null) {
 			if (this.getConfig().getConfigurationSection("weapons").contains(player.getItemInHand().getType().toString())) {
