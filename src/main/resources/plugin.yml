@@ -1,0 +1,45 @@
+name: ${project.name}
+author: Lucariatias
+version: ${project.version}
+description: ${project.description}
+main: com.enjin.averian_roleplay.core.AverianCore
+commands:
+    adddescription:
+        description: Adds to your character card description
+        usage: /<command> [info]
+    newcharacter:
+        description: Creates a new character
+        usage: /<command>
+    setclass:
+        description: Sets your class
+        usage: /<command> [class]
+    setdescription:
+        description: Sets your description
+        usage: /<command> [info]
+    setgender:
+        description: Sets your gender
+        usage: /<command> [gender]
+    setname:
+        description: Sets your name
+        usage: /<command> [name]
+    setrace:
+        description: Sets your race
+        usage: /<command> [race]
+    character:
+        description: Shows your character card
+        usage: /<command> (player)
+        aliases: [char]
+    rollinfo:
+        description: Shows your rollinfo
+        usage: /<command> (player)
+    roll:
+        description: Rolls
+        usage: /<command> [roll]
+    addexp:
+        description: Gives someone experience
+        usage: /<command> [player] [exp]
+permissions:
+    averian.core.command.addexp:
+        description: Allows you to add experience
+        default: op
+    

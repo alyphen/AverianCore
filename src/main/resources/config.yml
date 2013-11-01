@@ -1,0 +1,542 @@
+new-character-commands:
+    console:
+    - lwc admin purge {name}
+    player:
+    - spawn
+    - clearinv
+    - setname {name}s character
+    - setgender MALE
+    - setrace HUMAN
+    - setage 20
+    - setclass NONE
+    - setdescription A character
+character-file: characters.yml
+genders:
+- MALE
+- FEMALE
+- HERMAPHRODITE
+- UNKNOWN
+- OTHER
+restrict-genders: true
+races:
+    HUMAN:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 0
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 0
+        magic-attack-bonus: 0
+        magic-defence-bonus: 0
+        reflex-bonus: 0
+        luck-bonus: 0
+    ELF:
+        melee-attack-bonus: 0
+        melee-defence-bonus: -3
+        ranged-attack-bonus: 3
+        ranged-defence-bonus: -3
+        magic-attack-bonus: 3
+        magic-defence-bonus: 0
+        reflex-bonus: 1
+        luck-bonus: -1
+restrict-races: false
+classes:
+    NONE:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 0
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 0
+        magic-attack-bonus: 0
+        magic-defence-bonus: 0
+        reflex-bonus: 0
+        luck-bonus: 0
+    BARBARIAN:
+        melee-attack-bonus: 25
+        melee-defence-bonus: -10
+        ranged-attack-bonus: 5
+        ranged-defence-bonus: -5
+        magic-attack-bonus: 0
+        magic-defence-bonus: -10
+        reflex-bonus: -5
+        luck-bonus: 0
+    BARD:
+        melee-attack-bonus: -10
+        melee-defence-bonus: -10
+        ranged-attack-bonus: 10
+        ranged-defence-bonus: -10
+        magic-attack-bonus: 10
+        magic-defence-bonus: 0
+        reflex-bonus: 10
+        luck-bonus: 0
+    CLERIC:
+        melee-attack-bonus: 0
+        melee-defence-bonus: -25
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: -25
+        magic-attack-bonus: 25
+        magic-defence-bonus: 25
+        reflex-bonus: 0
+        luck-bonus: 0
+    DRUID:
+        melee-attack-bonus: -10
+        melee-defence-bonus: 10
+        ranged-attack-bonus: -15
+        ranged-defence-bonus: 15
+        magic-attack-bonus: -15
+        magic-defence-bonus: 15
+        reflex-bonus: 0
+        luck-bonus: 0
+    FIGHTER:
+        melee-attack-bonus: 20
+        melee-defence-bonus: 10
+        ranged-attack-bonus: 20
+        ranged-defence-bonus: -10
+        magic-attack-bonus: -20
+        magic-defence-bonus: 0
+        reflex-bonus: -10
+        luck-bonus: 0
+    MONK:
+        melee-attack-bonus: 10
+        melee-defence-bonus: 0
+        ranged-attack-bonus: -20
+        ranged-defence-bonus: 0
+        magic-attack-bonus: -20
+        magic-defence-bonus: -20
+        reflex-bonus: 50
+        luck-bonus: 0
+    PALADIN:
+        melee-attack-bonus: -50
+        melee-defence-bonus: 50
+        ranged-attack-bonus: -50
+        ranged-defence-bonus: 50
+        magic-attack-bonus: -50
+        magic-defence-bonus: 40
+        reflex-bonus: 0
+        luck-bonus: 10
+    RANGER:
+        melee-attack-bonus: -20
+        melee-defence-bonus: 0
+        ranged-attack-bonus: 40
+        ranged-defence-bonus: 40
+        magic-attack-bonus: -20
+        magic-defence-bonus: -20
+        reflex-bonus: 20
+        luck-bonus: -40
+    ROGUE:
+        melee-attack-bonus: 30
+        melee-defence-bonus: -10
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: -10
+        magic-attack-bonus: 0
+        magic-defence-bonus: -10
+        reflex-bonus: 50
+        luck-bonus: -50
+    SORCERER:
+        melee-attack-bonus: -25
+        melee-defence-bonus: -25
+        ranged-attack-bonus: -25
+        ranged-defence-bonus: -25
+        magic-attack-bonus: 50
+        magic-defence-bonus: 50
+        reflex-bonus: 0
+        luck-bonus: 0
+    WIZARD:
+        melee-attack-bonus: -20
+        melee-defence-bonus: -20
+        ranged-attack-bonus: -20
+        ranged-defence-bonus: -20
+        magic-attack-bonus: 40
+        magic-defence-bonus: 40
+        reflex-bonus: 0
+        luck-bonus: 0
+restrict-classes: true
+weapons:
+    WOOD_SWORD:
+        melee-attack-bonus: 15
+        melee-defence-bonus: 2
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 0
+        magic-attack-bonus: 0
+        magic-defence-bonus: 0
+        reflex-bonus: 0
+        luck-bonus: 0
+    STONE_SWORD:
+        melee-attack-bonus: 25
+        melee-defence-bonus: 3
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 0
+        magic-attack-bonus: 0
+        magic-defence-bonus: 0
+        reflex-bonus: 0
+        luck-bonus: 0
+    GOLD_SWORD:
+        melee-attack-bonus: 30
+        melee-defence-bonus: 4
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 0
+        magic-attack-bonus: 0
+        magic-defence-bonus: 0
+        reflex-bonus: 0
+        luck-bonus: 0
+    IRON_SWORD:
+        melee-attack-bonus: 35
+        melee-defence-bonus: 5
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 0
+        magic-attack-bonus: 0
+        magic-defence-bonus: 0
+        reflex-bonus: 0
+        luck-bonus: 0
+    DIAMOND_SWORD:
+        melee-attack-bonus: 50
+        melee-defence-bonus: 6
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 0
+        magic-attack-bonus: 0
+        magic-defence-bonus: 0
+        reflex-bonus: 0
+        luck-bonus: 0
+    BOW:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 0
+        ranged-attack-bonus: 35
+        ranged-defence-bonus: 0
+        magic-attack-bonus: 0
+        magic-defence-bonus: 0
+        reflex-bonus: 0
+        luck-bonus: 0
+    STICK:
+        melee-attack-bonus: 5
+        melee-defence-bonus: 1
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 0
+        magic-attack-bonus: 15
+        magic-defence-bonus: 0
+        reflex-bonus: 0
+        luck-bonus: 0
+    BLAZE_ROD:
+        melee-attack-bonus: 10
+        melee-defence-bonus: 1
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 0
+        magic-attack-bonus: 50
+        magic-defence-bonus: 3
+        reflex-bonus: 0
+        luck-bonus: 0
+helmets:
+    LEATHER_HELMET:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 1
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 1
+        magic-attack-bonus: 0
+        magic-defence-bonus: 1
+        reflex-bonus: -1
+        luck-bonus: 0
+    GOLD_HELMET:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 2
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 2
+        magic-attack-bonus: 0
+        magic-defence-bonus: 2
+        reflex-bonus: -2
+        luck-bonus: 0
+    CHAINMAIL_HELMET:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 2
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 2
+        magic-attack-bonus: 0
+        magic-defence-bonus: 2
+        reflex-bonus: -1
+        luck-bonus: 0
+    IRON_HELMET:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 3
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 3
+        magic-attack-bonus: 0
+        magic-defence-bonus: 3
+        reflex-bonus: -3
+        luck-bonus: 0
+    DIAMOND_HELMET:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 4
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 4
+        magic-attack-bonus: 0
+        magic-defence-bonus: 4
+        reflex-bonus: -4
+        luck-bonus: 0
+chestplates:
+    LEATHER_CHESTPLATE:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 3
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 3
+        magic-attack-bonus: 0
+        magic-defence-bonus: 3
+        reflex-bonus: -3
+        luck-bonus: 0
+    GOLD_CHESTPLATE:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 4
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 4
+        magic-attack-bonus: 0
+        magic-defence-bonus: 4
+        reflex-bonus: -4
+        luck-bonus: 0
+    CHAINMAIL_CHESTPLATE:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 4
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 4
+        magic-attack-bonus: 0
+        magic-defence-bonus: 4
+        reflex-bonus: -2
+        luck-bonus: 0
+    IRON_CHESTPLATE:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 5
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 5
+        magic-attack-bonus: 0
+        magic-defence-bonus: 5
+        reflex-bonus: -5
+        luck-bonus: 0
+    DIAMOND_CHESTPLATE:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 6
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 6
+        magic-attack-bonus: 0
+        magic-defence-bonus: 6
+        reflex-bonus: -6
+        luck-bonus: 0
+leggings:
+    LEATHER_LEGGINGS:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 2
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 2
+        magic-attack-bonus: 0
+        magic-defence-bonus: 2
+        reflex-bonus: -2
+        luck-bonus: 0
+    GOLD_LEGGINGS:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 3
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 3
+        magic-attack-bonus: 0
+        magic-defence-bonus: 3
+        reflex-bonus: -3
+        luck-bonus: 0
+    CHAINMAIL_LEGGINGS:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 3
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 3
+        magic-attack-bonus: 0
+        magic-defence-bonus: 3
+        reflex-bonus: -2
+        luck-bonus: 0
+    IRON_LEGGINGS:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 4
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 4
+        magic-attack-bonus: 0
+        magic-defence-bonus: 4
+        reflex-bonus: -4
+        luck-bonus: 0
+    DIAMOND_LEGGINGS:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 5
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 5
+        magic-attack-bonus: 0
+        magic-defence-bonus: 5
+        reflex-bonus: -5
+        luck-bonus: 0
+boots:
+    LEATHER_BOOTS:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 1
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 1
+        magic-attack-bonus: 0
+        magic-defence-bonus: 1
+        reflex-bonus: -1
+        luck-bonus: 0
+    GOLD_BOOTS:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 2
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 2
+        magic-attack-bonus: 0
+        magic-defence-bonus: 2
+        reflex-bonus: -2
+        luck-bonus: 0
+    CHAINMAIL_BOOTS:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 2
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 2
+        magic-attack-bonus: 0
+        magic-defence-bonus: 2
+        reflex-bonus: -1
+        luck-bonus: 0
+    IRON_BOOTS:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 3
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 3
+        magic-attack-bonus: 0
+        magic-defence-bonus: 3
+        reflex-bonus: -3
+        luck-bonus: 0
+    DIAMOND_BOOTS:
+        melee-attack-bonus: 0
+        melee-defence-bonus: 4
+        ranged-attack-bonus: 0
+        ranged-defence-bonus: 4
+        magic-attack-bonus: 0
+        magic-defence-bonus: 4
+        reflex-bonus: -4
+        luck-bonus: 0
+levels:
+    melee-attack-bonus: 3
+    melee-defence-bonus: 3
+    ranged-attack-bonus: 3
+    ranged-defence-bonus: 3
+    magic-attack-bonus: 3
+    magic-defence-bonus: 3
+    reflex-bonus: 3
+    luck-bonus: 3
+messages:
+    newcharacter:
+        success: '&aNew character created.'
+    setname:
+        success: '&aName set.'
+        more-arguments-needed: '&cYou must specify a name to set.'
+        not-a-player: '&cYou must be a player to use this command.'
+    setgender:
+        success: '&aGender set.'
+        more-arguments-needed: '&cYou must specify a gender to set.'
+        not-a-player: '&cYou must be a player to use this command.'
+        invalid: '&cYou cannot choose that gender.'
+    setrace:
+        success: '&aRace set.'
+        more-arguments-needed: '&cYou must specify a race to set.'
+        not-a-player: '&cYou must be a player to use this command.'
+        invalid: '&cYou cannot choose that race.'
+    setclass:
+        success: '&aClass set.'
+        more-arguments-needed: '&cYou must specify a class to set.'
+        not-a-player: '&cYou must be a player to use this command.'
+        invalid: '&cYou cannot choose that class.'
+    setdescription:
+        success: '&aDescription set.'
+        more-arguments-needed: '&cYou must specify some information to set.'
+        not-a-player: '&cYou must be a player to use this command.'
+    adddescription:
+        success: '&aDescription extended.'
+        more-arguments-needed: '&cYou must specify some information to add.'
+        not-a-player: '&cYou must be a player to use this command.'
+    character:
+        card:
+        - '&9===< Character card: {dispname}&9 >==='
+        - '&9Gender: &7{gender}'
+        - '&9Race: &7{race}'
+        - '&9Class: &7{class}'
+        - '&9Description: &7{description}'
+        - '&9Experience: &7{experience}/{experience-for-next-level}'
+        player-not-found: '&cYou must specify a player when executing the command from console.'
+    rollinfo:
+        rolls:
+        - '&9===< Roll info: {dispname}&9 >==='
+        - '&9Melee'
+        - '&9attack &7{melee-attack} &9| &7{melee-defence} defence'
+        - '&9Ranged'
+        - '&9attack &7{ranged-attack} &9| &7{ranged-defence} defence'
+        - '&9Magic'
+        - '&9attack &7{magic-attack} &9| &7{magic-defence} defence'
+        - '&9Reflex: &7{reflex}'
+        - '&9Luck: &7{luck}'
+        player-not-found: '&cYou must specify a player when executing the command from console.'
+    roll:
+        too-many-rolls: '&cYou can''t roll that many times.'
+        zero-or-negative: '&cYou can''t roll a zero or negative number.'
+        roll: '&9{name}&7/&9{dispname} &7rolled &e{roll}'
+    addexp:
+        success: '&aGave {name} {exp} exp'
+        invalid-amount: '&cAmount must be an integer.'
+        invalid-player: '&cThat player is not online.'
+        more-arguments-needed: '&cUsage: /addexp [player] [amount]'
+        no-permission: '&cYou do not have permission.'
+levelling:
+    exp-modifier: 1000
+    max-level: 30
+exp:
+    ARROW: 0
+    BAT: 1
+    BLAZE: 15
+    BOAT: 0
+    CAVE_SPIDER: 7
+    CHICKEN: 1
+    COMPLEX_PART: 0
+    COW: 1
+    CREEPER: 10
+    DROPPED_ITEM: 0
+    EGG: 0
+    ENDERMAN: 15
+    ENDER_CRYSTAL: 10
+    ENDER_DRAGON: 500
+    ENDER_PEARL: 0
+    ENDER_SIGNAL: 0
+    EXPERIENCE_ORB: 0
+    FALLING_BLOCK: 0
+    FIREBALL: 0
+    FIREWORK: 0
+    FISHING_HOOK: 0
+    GHAST: 25
+    GIANT: 25
+    HORSE: 1
+    IRON_GOLEM: 5
+    ITEM_FRAME: 0
+    LEASH_HITCH: 0
+    LIGHTNING: 0
+    MAGMA_CUBE: 3
+    MINECART: 0
+    MINECART_CHEST: 0
+    MINECART_FURNACE: 0
+    MINECART_HOPPER: 0
+    MINECART_MOB_SPAWNER: 0
+    MINECART_TNT: 0
+    MUSHROOM_COW: 1
+    OCELOT: 1
+    PAINTING: 0
+    PIG: 1
+    PIG_ZOMBIE: 7
+    PLAYER: 20
+    PRIMED_TNT: 0
+    SHEEP: 1
+    SILVERFISH: 3
+    SKELETON: 6
+    SLIME: 2
+    SMALL_FIREBALL: 0
+    SNOWBALL: 0
+    SNOWMAN: 1
+    SPIDER: 7
+    SPLASH_POTION: 0
+    SQUID: 1
+    THROWN_EXP_BOTTLE: 0
+    UNKNOWN: 0
+    VILLAGER: 1
+    WEATHER: 0
+    WITCH: 15
+    WITHER: 500
+    WITHER_SKULL: 0
+    WOLF: 1
+    ZOMBIE: 5
