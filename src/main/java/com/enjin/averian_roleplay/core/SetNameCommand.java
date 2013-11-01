@@ -18,11 +18,15 @@ public class SetNameCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if (sender instanceof Player) {
 			if (args.length >= 1) {
+				StringBuilder nameBuilder = new StringBuilder();
+				for (int i = 0; i < args.length; i++) {
+					nameBuilder.append(args[i]);
+					nameBuilder.append(" ");
+				}
+				String name = nameBuilder.toString();
 				Player player = (Player) sender;
-				plugin.getCharacterCard(player).setName(args[0]);
-				player.setDisplayName(args[0]);
-				player.setCustomName(args[0]);
-				player.setCustomNameVisible(true);
+				plugin.getCharacterCard(player).setName(name);
+				player.setDisplayName(name);
 				sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("messages.setname.success")));
 			} else {
 				sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("messages.setname.more-arguments-needed")));
