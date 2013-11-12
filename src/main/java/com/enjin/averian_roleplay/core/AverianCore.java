@@ -31,6 +31,7 @@ public class AverianCore extends JavaPlugin {
 		this.getCommand("setgender").setExecutor(new SetGenderCommand(this));
 		this.getCommand("setrace").setExecutor(new SetRaceCommand(this));
 		this.getCommand("setclass").setExecutor(new SetClassCommand(this));
+		this.getCommand("setprofession").setExecutor(new SetProfessionCommand(this));
 		this.getCommand("setdescription").setExecutor(new SetDescriptionCommand(this));
 		this.getCommand("adddescription").setExecutor(new AddDescriptionCommand(this));
 		this.getCommand("character").setExecutor(new CharacterCommand(this));
