@@ -22,6 +22,9 @@ commands:
     setname:
         description: Sets your name
         usage: /<command> [name]
+    setprofession:
+        description: Sets your profession
+        usage: /<command> [profession]
     setrace:
         description: Sets your race
         usage: /<command> [race]

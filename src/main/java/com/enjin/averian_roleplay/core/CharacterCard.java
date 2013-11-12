@@ -12,6 +12,7 @@ public class CharacterCard implements ConfigurationSerializable {
 	private String gender;
 	private String race;
 	private String clazz;
+	private String profession;
 	private String description;
 	private int experience;
 	
@@ -22,6 +23,7 @@ public class CharacterCard implements ConfigurationSerializable {
 		this.gender = "MALE";
 		this.race = "HUMAN";
 		this.clazz = "NONE";
+		this.profession = "UNEMPLOYED";
 		this.description = "A character";
 	}
 	
@@ -55,6 +57,14 @@ public class CharacterCard implements ConfigurationSerializable {
 
 	public void setClazz(String clazz) {
 		this.clazz = clazz.toUpperCase();
+	}
+
+	public String getProfession() {
+		return profession;
+	}
+
+	public void setProfession(String profession) {
+		this.profession = profession;
 	}
 
 	public String getDescription() {

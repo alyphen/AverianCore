@@ -259,6 +259,13 @@ classes:
             reflex-bonus: 0
             luck-bonus: 0
 restrict-classes: true
+professions:
+- MINER
+- SMITH
+- COOK
+- FARMER
+- ALCHEMIST
+restrict-professions: true
 weapons:
     WOOD_SWORD:
         melee-attack-bonus: 15
@@ -547,6 +554,11 @@ messages:
         more-arguments-needed: '&cYou must specify a class to set.'
         not-a-player: '&cYou must be a player to use this command.'
         invalid: '&cYou cannot choose that class.'
+    setprofession:
+        success: '&aProfession set.'
+        more-arguments-needed: '&cYou must specify a profession to set.'
+        not-a-player: '&cYou must be a player to use this command.'
+        invalid: '&cYou cannot choose that profession.'
     setdescription:
         success: '&aDescription set.'
         more-arguments-needed: '&cYou must specify some information to set.'
@@ -561,6 +573,7 @@ messages:
         - '&9Gender: &7{gender}'
         - '&9Race: &7{race}'
         - '&9Class: &7{class}'
+        - '&9Profession: &7{profession}'
         - '&9Description: &7{description}'
         - '&9Experience: &7{experience}/{experience-for-next-level}'
         player-not-found: '&cYou must specify a player when executing the command from console.'
