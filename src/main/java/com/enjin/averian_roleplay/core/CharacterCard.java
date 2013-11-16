@@ -94,6 +94,7 @@ public class CharacterCard implements ConfigurationSerializable {
 		serialised.put("gender", gender);
 		serialised.put("race", race);
 		serialised.put("class", clazz);
+		serialised.put("profession", profession);
 		serialised.put("description", description);
 		serialised.put("experience", experience);
 		return serialised;
@@ -105,6 +106,7 @@ public class CharacterCard implements ConfigurationSerializable {
 		deserialised.gender = (String) serialised.get("gender");
 		deserialised.race = (String) serialised.get("race");
 		deserialised.clazz = (String) serialised.get("class");
+		deserialised.profession = (String) serialised.get("profession");
 		deserialised.description = (String) serialised.get("description");
 		deserialised.experience = (int) serialised.get("experience");
 		return deserialised;
