@@ -28,7 +28,18 @@ public class CharacterCommand implements CommandExecutor {
 		if (player != null) {
 			CharacterCard card = plugin.getCharacterCard(player);
 			for (String line : plugin.getConfig().getStringList("messages.character.card")) {
-				sender.sendMessage(ChatColor.translateAlternateColorCodes('&', line).replace("{name}", player.getName()).replace("{dispname}", player.getDisplayName()).replace("{gender}", card.getGender()).replace("{race}", card.getRace()).replace("{class}", card.getClazz()).replace("{profession}", card.getProfession()).replace("{description}", card.getDescription()).replace("{experience}", "" + card.getExperience()).replace("{experience-for-next-level}", "" + (((player.getLevel() + 1) * plugin.getConfig().getInt("levelling.exp-modifier")))));
+				sender.sendMessage(ChatColor.translateAlternateColorCodes('&', line)
+						.replace("{name}", player.getName())
+						.replace("{dispname}", player.getDisplayName())
+						.replace("{gender}", card.getGender())
+						.replace("{race}", card.getRace())
+						.replace("{class}", card.getClazz())
+						.replace("{profession}", card.getProfession())
+						.replace("{description}", card.getDescription())
+						.replace("{experience}", "" + card.getExperience())
+						.replace("{experience-for-next-level}", "" + (((player.getLevel() + 1) * plugin.getConfig().getInt("levelling.exp-modifier"))))
+						.replace("{health}", "" + Math.min(card.getHealth(), plugin.getMaxHealth(player)))
+						.replace("{max-health}", "" + plugin.getMaxHealth(player)));
 			}
 		} else {
 			sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("messages.character.player-not-found")));

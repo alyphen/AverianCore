@@ -41,6 +41,9 @@ commands:
     addexp:
         description: Gives someone experience
         usage: /<command> [player] [exp]
+    hit:
+        description: Takes a hit
+        usage: /<command>
 permissions:
     averian.core.command.addexp:
         description: Allows you to add experience

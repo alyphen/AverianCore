@@ -3,6 +3,7 @@ package com.enjin.averian_roleplay.core;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.configuration.serialization.ConfigurationSerializable;
 
@@ -15,6 +16,7 @@ public class CharacterCard implements ConfigurationSerializable {
 	private String profession;
 	private String description;
 	private int experience;
+	private int health;
 	
 	private CharacterCard() {}
 	
@@ -25,6 +27,10 @@ public class CharacterCard implements ConfigurationSerializable {
 		this.clazz = "NONE";
 		this.profession = "UNEMPLOYED";
 		this.description = "A character";
+		if (player.isOnline()) {
+			AverianCore plugin = (AverianCore) Bukkit.getPluginManager().getPlugin("AverianCore");
+			this.health = plugin.getMaxHealth(player.getPlayer());
+		}
 	}
 	
 	public String getName() {
@@ -86,6 +92,14 @@ public class CharacterCard implements ConfigurationSerializable {
 	public void setExperience(int experience) {
 		this.experience = experience;
 	}
+	
+	public int getHealth() {
+		return health;
+	}
+	
+	public void setHealth(int health) {
+		this.health = health;
+	}
 
 	@Override
 	public Map<String, Object> serialize() {
@@ -97,6 +111,7 @@ public class CharacterCard implements ConfigurationSerializable {
 		serialised.put("profession", profession);
 		serialised.put("description", description);
 		serialised.put("experience", experience);
+		serialised.put("health", health);
 		return serialised;
 	}
 	
@@ -109,6 +124,7 @@ public class CharacterCard implements ConfigurationSerializable {
 		deserialised.profession = (String) serialised.get("profession");
 		deserialised.description = (String) serialised.get("description");
 		deserialised.experience = (int) serialised.get("experience");
+		deserialised.health = (int) serialised.get("health");
 		return deserialised;
 	}
 

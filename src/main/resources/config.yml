@@ -576,6 +576,7 @@ messages:
         - '&9Profession: &7{profession}'
         - '&9Description: &7{description}'
         - '&9Experience: &7{experience}/{experience-for-next-level}'
+        - '&9HP: &7{health}/{max-health}'
         player-not-found: '&cYou must specify a player when executing the command from console.'
     rollinfo:
         rolls:
@@ -602,6 +603,8 @@ messages:
 levelling:
     exp-modifier: 1000
     max-level: 30
+    health: 0.33
+initial-health: 5
 exp:
     ARROW: 0
     BAT: 1

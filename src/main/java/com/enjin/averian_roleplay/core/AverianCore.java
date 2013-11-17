@@ -38,10 +38,23 @@ public class AverianCore extends JavaPlugin {
 		this.getCommand("rollinfo").setExecutor(new RollInfoCommand(this));
 		this.getCommand("roll").setExecutor(new RollCommand(this));
 		this.getCommand("addexp").setExecutor(new AddExpCommand(this));
+		this.getCommand("hit").setExecutor(new HitCommand(this));
 		this.getServer().getPluginManager().registerEvents(new PlayerExpChangeListener(this), this);
 		this.getServer().getPluginManager().registerEvents(new PlayerInteractEntityListener(this), this);
 		this.getServer().getPluginManager().registerEvents(new EntityDeathListener(this), this);
 		this.getServer().getPluginManager().registerEvents(new PlayerDeathListener(), this);
+		this.getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
+			@Override
+			public void run() {
+				for (Player player : AverianCore.this.getServer().getOnlinePlayers()) {
+					CharacterCard card = AverianCore.this.getCharacterCard(player);
+					if (card.getHealth() < getMaxHealth(player)) {
+						card.setHealth(card.getHealth() + 1);
+						player.sendMessage(ChatColor.GREEN + "Your wounds are slowly healing. +1 HP.");
+					}
+				}
+			}
+		}, 36000L, 0L);
 	}
 	
 	@Override
@@ -291,6 +304,10 @@ public class AverianCore extends JavaPlugin {
 			}
 		}
 		player.setExp((float) (amount / total));
+	}
+	
+	public int getMaxHealth(Player player) {
+		return (int) Math.floor((player.getLevel() * getConfig().getDouble("levelling.health")) + getConfig().getDouble("initial-health"));
 	}
 
 }
